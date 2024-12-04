@@ -9,6 +9,8 @@ document.addEventListener("mousemove", (e) => {
 });
 
 setInterval(() => {
-  sub.style.left = (window.innerWidth) - 240 + "px";
-  sub.style.top = (window.innerHeight) - 135 + "px";
+  const xMax = (window.innerWidth) - 240;
+  const yMax = (window.innerHeight) - 135
+  sub.style.left = Math.floor(Math.random() * xMax) + "px";
+  sub.style.top  = Math.floor(Math.random() * yMax) + "px";
 }, 500);
