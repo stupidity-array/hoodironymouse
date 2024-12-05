@@ -13,4 +13,4 @@ setInterval(() => {
   const yMax = (window.innerHeight) - 135
   sub.style.left = Math.floor(Math.random() * xMax) + "px";
   sub.style.top  = Math.floor(Math.random() * yMax) + "px";
-}, 500);
+}, 1500);
