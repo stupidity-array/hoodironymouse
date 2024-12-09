@@ -13,13 +13,18 @@ function randomImageSpam( src, resW, resH, stayTime, intervalMin, intervalMax ) 
     spam.style.position = "absolute";
     spam.style.width  = resW + "px";
     spam.style.height = resH + "px";
+    
     const xMax = (window.innerWidth) - Math.floor(resW * 0.5);
     const yMax = (window.innerHeight) - Math.floor(resH * 0.5);
+    
     spam.style.left = Math.floor(Math.random() * xMax) + "px";
     spam.style.top  = Math.floor(Math.random() * yMax) + "px";
+    
     document.body.prepend(spam);
     setTimeout(() => {spam.remove();}, stayTime);
-  }, Math.floor(intervalMin + Math.random() * (intervalMax - intervalMin));
+    
+    randomImageSpam( src, resW, resH, stayTime, intervalMin, intervalMax );
+  }, Math.floor(intervalMin + Math.random() * (intervalMax - intervalMin)));
 }
 
 randomImageSpam("/sub.gif", 480, 270, 4000, 2000, 5000);
