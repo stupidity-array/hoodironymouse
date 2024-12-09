@@ -27,5 +27,5 @@ function randomImageSpam( src, resW, resH, stayTime, intervalMin, intervalMax ) 
   }, Math.floor(intervalMin + Math.random() * (intervalMax - intervalMin)));
 }
 
-randomImageSpam("/sub.gif", 480, 270, 4000, 2000, 5000);
-randomImageSpam("https://cdn.pixabay.com/animation/2023/01/20/02/36/02-36-45-286_512.gif", 170, 170, 3000, 1000, 3000);
+randomImageSpam("/hoodironymouse/sub.gif", 480, 270, 4000, 2000, 5000);
+randomImageSpam("/hoodironymouse/like.gif", 170, 170, 3000, 1000, 3000);
