@@ -6,7 +6,7 @@ document.addEventListener("mousemove", (e) => {
   blud.style.top  = (e.clientY - 100) + "px";
 });
 
-function randomImageSpam( src, resW, resH, stayTime, intervalMin, intervalMax ) { 
+function randomImageSpam( src, resW, resH, stayTime, intervalMin, intervalMax, circleY ) { 
   setTimeout(() => {
     const spam = document.createElement("img");
     spam.src = src;
@@ -16,16 +16,29 @@ function randomImageSpam( src, resW, resH, stayTime, intervalMin, intervalMax ) 
     
     const xMax = (window.innerWidth) - Math.floor(resW * 0.5);
     const yMax = (window.innerHeight) - Math.floor(resH * 0.5);
+
+    const left = Math.floor(Math.random() * xMax) + "px";
+    const top = Math.floor(Math.random() * yMax) + "px";
     
-    spam.style.left = Math.floor(Math.random() * xMax) + "px";
-    spam.style.top  = Math.floor(Math.random() * yMax) + "px";
+    spam.style.left = left;
+    spam.style.top  = top;
     
     document.body.prepend(spam);
     setTimeout(() => {spam.remove();}, stayTime);
+
+    if(circleY) {
+      const circle = document.createElement("img");
+      circle.src = "/hoodironymouse/circle.webp";
+      circle.class = "circle";
+      circle.style.position = "absolute";
+      circle.style.left = left;
+      circle.style.top = top;
+      setTimeout(() => {circle.remove();}, 2000);
+    }
     
-    randomImageSpam( src, resW, resH, stayTime, intervalMin, intervalMax );
+    randomImageSpam( src, resW, resH, stayTime, intervalMin, intervalMax, circleY );
   }, Math.floor(intervalMin + Math.random() * (intervalMax - intervalMin)));
 }
 
-randomImageSpam("/hoodironymouse/sub.gif", 480, 270, 4000, 2000, 5000);
-randomImageSpam("/hoodironymouse/like.webp", 170, 170, 3000, 1000, 3000);
+randomImageSpam("/hoodironymouse/sub.gif", 480, 270, 4000, 2000, 5000, true);
+randomImageSpam("/hoodironymouse/like.webp", 170, 170, 3000, 1000, 3000, false);
