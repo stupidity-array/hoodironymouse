@@ -3,7 +3,7 @@ body {
   overflow: hidden;
 }
 
-#circle {
+.circle {
   animation-name: example;
   animation-iteration-count: 6;
   animation-duration: 0.1s;
