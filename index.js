@@ -28,4 +28,4 @@ function randomImageSpam( src, resW, resH, stayTime, intervalMin, intervalMax ) 
 }
 
 randomImageSpam("/hoodironymouse/sub.gif", 480, 270, 4000, 2000, 5000);
-randomImageSpam("/hoodironymouse/like.gif", 170, 170, 3000, 1000, 3000);
+randomImageSpam("/hoodironymouse/like.webp", 170, 170, 3000, 1000, 3000);
