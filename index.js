@@ -19,7 +19,6 @@ function randomImageSpam( src, resW, resH, stayTime, intervalMin, intervalMax ) 
     spam.style.top  = Math.floor(Math.random() * yMax) + "px";
     document.body.prepend(spam);
     setTimeout(() => {spam.remove();}, stayTime);
-    randomImageSpam( src, resW, resH, stayTime, intervalMin, intervalMax );
   }, Math.floor(intervalMin + Math.random() * (intervalMax - intervalMin));
 }
 
