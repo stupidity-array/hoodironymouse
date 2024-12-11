@@ -33,6 +33,8 @@ function randomImageSpam( src, resW, resH, stayTime, intervalMin, intervalMax, c
       circle.style.position = "absolute";
       circle.style.left = left;
       circle.style.top = top;
+      document.body.prepend(circle);
+      
       setTimeout(() => {circle.remove();}, 2000);
     }
     
