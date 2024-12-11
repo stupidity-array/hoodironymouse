@@ -26,13 +26,13 @@ function randomImageSpam( src, resW, resH, stayTime, intervalMin, intervalMax, c
     document.body.prepend(spam);
     setTimeout(() => {spam.remove();}, stayTime);
 
-    if(circleY) {
+    if(circleY && Math.floor(Math.random() * 6) == 1) {
       const circle = document.createElement("img");
       circle.src = "/hoodironymouse/circle.webp";
       circle.className = "circle";
       circle.style.position = "absolute";
-      circle.style.left = left + Math.floor(resW * 0.5);
-      circle.style.top = top + Math.floor(resH * 0.5);
+      circle.style.left = (left - 112) + Math.floor(resW * 0.5);
+      circle.style.top = (top - 112) + Math.floor(resH * 0.5);
       document.body.prepend(circle);
       
       setTimeout(() => {circle.remove();}, 2000);
