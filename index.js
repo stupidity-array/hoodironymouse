@@ -31,8 +31,8 @@ function randomImageSpam( src, resW, resH, stayTime, intervalMin, intervalMax, c
       circle.src = "/hoodironymouse/circle.webp";
       circle.className = "circle";
       circle.style.position = "absolute";
-      circle.style.left = (left - 112) + Math.floor(resW * 0.5);
-      circle.style.top = (top - 112) + Math.floor(resH * 0.5);
+      circle.style.left = (left - 112) + Math.floor(resW * 0.5) + "px";
+      circle.style.top = (top - 112) + Math.floor(resH * 0.5) + "px;
       document.body.prepend(circle);
       
       setTimeout(() => {circle.remove();}, 2000);
