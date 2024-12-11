@@ -28,7 +28,7 @@ function randomImageSpam( src, resW, resH, stayTime, intervalMin, intervalMax, c
 
     if(circleChance && Math.floor(Math.random() * (circleChance + 1)) == 1) {
       const circle = document.createElement("img");
-      circle.src = "/hoodironymouse/circle.webp";
+      circle.src = "/hoodironymouse/img/circle.webp";
       circle.className = "circle";
       circle.style.position = "absolute";
       circle.style.left = (left - 112) + Math.floor(resW * 0.5) + "px";
@@ -42,5 +42,6 @@ function randomImageSpam( src, resW, resH, stayTime, intervalMin, intervalMax, c
   }, Math.floor(intervalMin + Math.random() * (intervalMax - intervalMin)));
 }
 
-randomImageSpam("/hoodironymouse/sub.gif", 480, 270, 4000, 2000, 5000, 7);
-randomImageSpam("/hoodironymouse/like.webp", 170, 170, 3000, 1000, 3000, false);
+randomImageSpam("/hoodironymouse/img/sub.gif", 480, 270, 4000, 2000, 5000, 7);
+randomImageSpam("/hoodironymouse/img/like.webp", 170, 170, 3000, 1000, 3000, false);
+randomImageSpam("/hoodironymouse/img/toddlers.jpg", 352, 466, 5000, 5000, 10000, 3);
