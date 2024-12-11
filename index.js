@@ -29,10 +29,10 @@ function randomImageSpam( src, resW, resH, stayTime, intervalMin, intervalMax, c
     if(circleY) {
       const circle = document.createElement("img");
       circle.src = "/hoodironymouse/circle.webp";
-      circle.class = "circle";
+      circle.className = "circle";
       circle.style.position = "absolute";
-      circle.style.left = left;
-      circle.style.top = top;
+      circle.style.left = left + Math.floor(resW * 0.5);
+      circle.style.top = top + Math.floor(resH * 0.5);
       document.body.prepend(circle);
       
       setTimeout(() => {circle.remove();}, 2000);
