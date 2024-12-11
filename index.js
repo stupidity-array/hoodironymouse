@@ -17,11 +17,11 @@ function randomImageSpam( src, resW, resH, stayTime, intervalMin, intervalMax, c
     const xMax = (window.innerWidth) - Math.floor(resW * 0.5);
     const yMax = (window.innerHeight) - Math.floor(resH * 0.5);
 
-    const left = Math.floor(Math.random() * xMax) + "px";
-    const top = Math.floor(Math.random() * yMax) + "px";
+    const left = Math.floor(Math.random() * xMax);
+    const top = Math.floor(Math.random() * yMax);
     
-    spam.style.left = left;
-    spam.style.top  = top;
+    spam.style.left = left + "px";
+    spam.style.top  = top + "px";
     
     document.body.prepend(spam);
     setTimeout(() => {spam.remove();}, stayTime);
